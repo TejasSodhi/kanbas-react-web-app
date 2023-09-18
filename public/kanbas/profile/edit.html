@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td valign = "top">
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+            <td valign = "top">
+                <ul>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">ePortfolios</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The Hub</a></li>
+                    <li><a href="#">Qwickly Course Tools</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+                </ul>
+            </td>
+            <td valign="top">
+                <label><h2>Tejas Sodhi</h2></label>
+                <form id="text-fields">
+                    <label for="text-fields-username">Name:*</label>
+                    <input id="text-fields-username" value="Tejas Sodhi"/>
+                    <label for="text-fields-username">Pronouns:</label>
+                    <select>
+                        <option selected value="speed-grader-edit">None</option>
+                    </select><br>
+                    <p>
+                        <label for="text-fields-username">Title:</label>
+                        <input id="text-fields-username" placeholder=""/><br/>
+                    </p>
+                </form>
+                <p>
+                    <label><h2>Contact</h2></label>
+                    <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
+                </p>
+                <p>
+                    <label><h2>Contact</h2></label>
+                    <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
+                </p>
+                <form id="textarea">
+                    <label><h2>Biography</h2></label>
+                    <p>Graduate Student, Full Stack Engineer, Tech Enthusiast</p>
+                    <textarea cols="30" rows="3" >Graduate Student, Full Stack Engineer, Tech Enthusiast
+                    </textarea>
+                 </form>
+                 
+                 <p>
+                    <label><h2>Links</h2></label>
+                    <ul>
+                        <li><a href="#">Youtube</a> -> Links to an external site</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <td colspan = "1"></td>
+                                <th>URL</th>
+                                <td colspan = "1"></td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td><input id="text-fields-username" value="YouTube"/></td>
+                            <td><p>-></p></td>
+                            <td><input id="text-fields-username" value="https://www.youtube.com/"/></td>
+                            <td><a href="#">Remove</a></td>
+                        </tr>
+                    </table>
+                 </p>
+                <button type="button" onclick="navigateToProfileScreen()">Add another link</button><br/>
+                <button type="button" onclick="navigateToProfileScreen()">Cancel</button>
+                <button type="button" onclick="navigateToProfileScreen()">Save Profile</button><br/>
+                <button type="button" onclick="navigateToProfileScreen()">Edit Profile</button>
+                <button type="button" onclick="navigateToProfileScreen()">Cancel Editing</button>
+                <script>
+                    function navigateToProfileScreen() {
+                        window.location.href = 'index.html';
+                    }
+                </script>
+               
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
