@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Assignment</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td valign = "top">
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+            <td valign = "top">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panapto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaboration</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </td>
+            <td valign="top">
+                <select>
+                    <option selected value="speed-grader-edit">SpeedGrader</option>
+                </select>
+                <h4>Assignment Name</h4>
+                <p><input type="text" value="A1 - ENV + HTML"></p>
+                <form id="textarea">
+                    <textarea>This is the assignment description</textarea>
+                </form>
+                 <p>
+                    <label for="points">Points</label><br>
+                    <input type="text" value="100">
+                </p>
+                <p>
+                <label for="assignment-group">Assignment Group</label><br>
+                <select><option selected value="assignment">ASSIGNMENTS</option></select>
+                <p><label for="display-grade">Display Grade as</label><br>
+                <select><option selected value="percentage">Percentage</option></select></p>
+                <p><label for="submission-type">Submission Type</label><br>
+                <select><option selected value="online">Online</option></select>
+                </p>
+                <p>
+                <label>Online Entry Options</label>
+                <br>
+                <input type="checkbox" value="text-entry"
+                    name="check-entry-option" id="chkbox-text-entry"/>
+                <label for="chkbox-text-entry">Text Entry</label>    <br>
+                <input type="checkbox" value="website-url"
+                    name="check-entry-option" id="chkbox-url"/>
+                <label for="chkbox-url">Website URL</label>    <br>
+                <input type="checkbox" value="media-recordings"
+                    name="check-entry-option" id="chkbox-media-recordings"/>
+                <label for="chkbox-media-recordings">Media Recordings</label> <br>
+                <input type="checkbox" value="student-annotation"
+                    name="check-entry-option" id="chkbox-student-annotation"/>
+                <label for="chkbox-student-annotation">Student Annotation</label><br>
+                <input type="checkbox" value="file-uploads"
+                    name="check-entry-option" id="chkbox-file-uploads"/>
+                <label for="chkbox-file-uploads">File Uploads</label>
+                </p>
+
+                <p>
+                    <label for="submission-attempts">Submission Attempts</label><br>
+                    <select><option selected value="unlimited">Unlimited</option></select>
+                    <p><label for="plagiarism-review">Plagiarism Review</label><br>
+                    <select><option selected value="none">None</option></select>
+                </p>
+                <p>
+                    <label >Group Assignment</label>
+                    <br>
+                <input type="checkbox" value="group-assignment"
+                    name="check-group-assignment-option" id="chkbox-group-assignment"/>
+                <label for="chkbox-group-assignment">This is a group assignment</label>    <br>
+
+                </p>
+                <p>
+                    <label >Peer Review</label>
+                    <br>
+                <input type="checkbox" value="peer-review-required"
+                    name="check-peer-reviews" id="chkbox-peer-review-required"/>
+                <label for="chkbox-peer-review-required">Require Peer Reviews</label>    <br>
+
+                </p>
+                
+                <p>
+                    <label>Assign<br>Assign to</label><br>
+                    <input type="text" value="Everyone"></p>
+                <p>
+                <label>Due</label><br>
+                <input type="date" value="2021-01-01"><br></p>
+                <p>
+                <label>Available from</label><br>
+                <input type="date" value="2021-01-01"><br>
+                </p>
+                <p>
+                <label>Until</label><br>
+                <input type="date" value="2021-01-01"><br>
+                </p>
+                <button type="button" onclick="navigateToAssignmentScreen()">Save</button>
+                <button type="button" onclick="navigateToAssignmentScreen()">Cancel</button>
+                <script>
+                    function navigateToAssignmentScreen() {
+                        window.location.href = 'file:///Users/tejassodhi/Documents/2023/fall/webdev/kanbas-react-web-app/public/kanbas/assignments/index.html';
+                    }
+                </script>
+                        
+            </td>
+        </tr>
+        </table>
+        </body>
+        </html>
