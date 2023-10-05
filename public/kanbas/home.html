@@ -2,55 +2,46 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Kanbas</title>
+        <title>Home</title>
         <link href="../vendors/bootstrap/bootstrap.min.css" rel="stylesheet" />
         <link href="../vendors/fontawesome/css/font-awesome.css" rel="stylesheet" />
         <link href="home.css" rel="stylesheet" />
     </head>
 
     <body>
-        <div
-            class="wd-top-navbar wd-bg-black wd-fg-white d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"
-        >
-            <a href="../navigation/kanbas-navigation.html"
-                ><button class="btn btn-danger">Kanbas Navigation</button></a
-            >
-            <a href="../navigation/course-navigation.html"
-                ><button class="btn btn-danger">Course Navigation</button></a
-            >
-        </div>
+
         <div class="wd-main-layout">
-            <div class="wd-flex-navbar d-none d-md-block">
+            <div class="wd-flex-navbar">
                 <ul>
                     <li class="wd-bg-black mb-2 mt-2">
                         <img src="../images/northeastern_logo.png" />
                     </li>
 
                     <li class="wd-home-nav-icon">
-                        <a class="wd-fg-white" href="../account/account.html"
+                        <a class="wd-fg-white" href="profile/index.html"
                             ><i class="fa fa-user fa-2x wd-fg-white" aria-hidden="true"></i
                         ></a>
                     </li>
                     <li class="wd-home-nav-text">
-                        <a class="wd-fg-white" href="../account/account.html">Account</a>
+                        <a class="wd-fg-white" href="profile/index.html">Account</a>
                     </li>
 
                     <li class="wd-home-nav-icon">
-                        <a class="wd-fg-white" href="../dashboard/index.html"
-                            ><i class="fa fa-tachometer fa-2x wd-bg-red" aria-hidden="true"></i
+                        <a class="wd-fg-white" href="dashboard.html"
+                            ><i class="fa fa-bars fa-2x wd-bg-red" aria-hidden="true"></i
                         ></a>
                     </li>
                     <li class="wd-home-nav-text">
-                        <a class="wd-fg-white" href="../dashboard/index.html">Dashboard</a>
+                        <a class="wd-fg-white" href="dashboard.html">Dashboard</a>
                     </li>
 
                     <li class="wd-home-nav-icon wd-home-nav-active">
-                        <a class="wd-fg-white" href="../courses/home.html"
+                        <a class="wd-fg-white" href="home.html"
                             ><i class="fa fa-book fa-2x wd-bg-red" aria-hidden="true"></i
                         ></a>
                     </li>
                     <li class="wd-home-nav-text wd-home-nav-active">
-                        <a class="wd-fg-white" href="../courses/home.html">Courses</a>
+                        <a class="wd-fg-white" href="home.html">Courses</a>
                     </li>
 
                     <li class="wd-home-nav-icon">
@@ -110,13 +101,12 @@
                 </ul>
             </div>
 
-            <!-- Flex column -->
             <div class="wd-flex-course-screen">
                 <div class="wd-courses-breadcrumb ms-2">
                     <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <i class="fa fa-bars" aria-hidden="true"></i> CS5610 2142 Web
+                                <i class="fa fa-bars" aria-hidden="true" style="margin-right: 10px;"></i> CS5610.11550 Web
                                 Development
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">Home</li>
@@ -124,7 +114,6 @@
                     </nav>
                 </div>
 
-                <!-- Flex row -->
                 <div class="wd-courses-content">
                     <div class="wd-flex-courses-navbar d-none d-md-block">
                         <ul>
@@ -132,13 +121,9 @@
                             <li><a class="wd-fg-red" href="#">Modules</a></li>
                             <li><a class="wd-fg-red" href="#">Piazza</a></li>
                             <li><a class="wd-fg-red" href="#">Zoom Meetings</a></li>
-                            <li>
-                                <a class="wd-fg-red" href="../assignments/index.html"
-                                    >Assignments</a
-                                >
-                            </li>
+                            <li><a class="wd-fg-red" href="assignments/index.html">Assignments</a></li>
                             <li><a class="wd-fg-red" href="#">Quizzes</a></li>
-                            <li><a class="wd-fg-red" href="../grades/index.html">Grades</a></li>
+                            <li><a class="wd-fg-red" href="grades/grades.html">Grades</a></li>
                             <li><a class="wd-fg-red" href="#">People</a></li>
                             <li><a class="wd-fg-red" href="#">Panopto Video</a></li>
                             <li><a class="wd-fg-red" href="#">Discussions</a></li>
@@ -149,22 +134,18 @@
                             <li><a class="wd-fg-red" href="#">Outcomes</a></li>
                             <li><a class="wd-fg-red" href="#">Collaborations</a></li>
                             <li><a class="wd-fg-red" href="#">Syllabus</a></li>
-                            <li>
-                                <a class="wd-fg-red" href="../settings/course-details.html"
-                                    >Settings</a
-                                >
-                            </li>
+                            <li><a class="wd-fg-red" href="settings/index.html">Settings</a></li>
                         </ul>
                     </div>
 
-                    <!-- Flex column -->
                     <div class="wd-flex-course-modules col-8">
                         <div class="wd-course-module-header-buttons">
                             <div class="buttons float-end">
                                 <button class="btn wd-bg-lightgray">Collapse All</button>
                                 <button class="btn wd-bg-lightgray">View Progress</button>
                                 <select class="btn wd-bg-lightgray">
-                                    <option selected>Publish All</option>
+                                    <option selected><i
+                                        class="fa fa-check-circle"></i>Publish All</option>
                                 </select>
                                 <button class="btn btn-danger">
                                     <i class="fa fa-plus" aria-hidden="true"></i> Module
@@ -503,10 +484,12 @@
 
                         <div class="col-8">
                             Coming Up
+                            <a style="font-weight: normal; float: right; text-decoration:none;color:#b52828" href="#"> View Calendar</a>
+                            <i style="float: right; margin-right: 10px;"class=" fa fa-calendar"></i>
                             <ul>
-                                <li>Lecture CS4550.12631.202410 Sep 7 at 11:45am</li>
-                                <li>Lecture CS4550.12631.202410 Sep 11 att 11:45am</li>
-                                <li>CS5610 06 SP23 Lecture Sep 11 at 6pm</li>
+                                <li><a class="course-link" href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
+                                <li><a class="course-link" href="#">Lecture CS4550.12631.202410 Sep 11 att 11:45am</a></li>
+                                <li><a class="course-link" href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
                             </ul>
                         </div>
                     </div>

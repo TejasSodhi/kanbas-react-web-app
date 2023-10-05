@@ -6,6 +6,13 @@
         <link href="../../vendors/bootstrap/bootstrap.min.css" rel="stylesheet" />
         <link href="../../vendors/fontawesome/css/font-awesome.css" rel="stylesheet" />
         <link href="../css/editAssignments.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.11.2/dist/css/bootstrap-datepicker.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.11.2/dist/js/bootstrap-datepicker.min.js"></script>
+
     </head>
 
     <body>
@@ -17,30 +24,30 @@
                     </li>
 
                     <li class="wd-home-nav-icon">
-                        <a class="wd-fg-white" href="../account/account.html"
+                        <a class="wd-fg-white" href="../profile/index.html"
                             ><i class="fa fa-user fa-2x wd-fg-white" aria-hidden="true"></i
                         ></a>
                     </li>
                     <li class="wd-home-nav-text">
-                        <a class="wd-fg-white" href="../account/account.html">Account</a>
+                        <a class="wd-fg-white" href="../profile/index.html">Account</a>
                     </li>
 
                     <li class="wd-home-nav-icon">
-                        <a class="wd-fg-white" href="../dashboard/index.html"
+                        <a class="wd-fg-white" href="../dashboard.html"
                             ><i class="fa fa-tachometer fa-2x wd-bg-red" aria-hidden="true"></i
                         ></a>
                     </li>
                     <li class="wd-home-nav-text">
-                        <a class="wd-fg-white" href="../dashboard/index.html">Dashboard</a>
+                        <a class="wd-fg-white" href="../dashboard.html">Dashboard</a>
                     </li>
 
                     <li class="wd-home-nav-icon wd-home-nav-active">
-                        <a class="wd-fg-white" href="../courses/home.html"
+                        <a class="wd-fg-white" href="../home.html"
                             ><i class="fa fa-book fa-2x wd-bg-red" aria-hidden="true"></i
                         ></a>
                     </li>
                     <li class="wd-home-nav-text wd-home-nav-active">
-                        <a class="wd-fg-white" href="../courses/home.html">Courses</a>
+                        <a class="wd-fg-white" href="../home.html">Courses</a>
                     </li>
 
                     <li class="wd-home-nav-icon">
@@ -100,13 +107,12 @@
                 </ul>
             </div>
 
-            <!-- Flex column -->
             <div class="wd-flex-assignment-screen">
                 <div class="wd-assignment-breadcrumb ms-2">
                     <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <i class="fa fa-bars" aria-hidden="true"></i> CS5610 2142 Web
+                                <i class="fa fa-bars" aria-hidden="true" style="margin-right: 10px;"></i> CS5610.11550 Web
                                 Development
                             </li>
                             <li class="breadcrumb-item">Assignments</li>
@@ -117,21 +123,16 @@
                     </nav>
                 </div>
 
-                <!-- Flex row -->
                 <div class="wd-courses-content">
                     <div class="wd-flex-assignments-navbar">
                         <ul>
-                            <li><a class="wd-fg-red" href="../courses/home.html">Home</a></li>
+                            <li><a class="wd-fg-red" href="../home.html">Home</a></li>
                             <li><a class="wd-fg-red" href="#">Modules</a></li>
                             <li><a class="wd-fg-red" href="#">Piazza</a></li>
                             <li><a class="wd-fg-red" href="#">Zoom Meetings</a></li>
-                            <li>
-                                <a class="wd-assignment-nav-active" href="index.html"
-                                    >Assignments</a
-                                >
-                            </li>
+                            <li><a class="wd-assignment-nav-active" href="index.html">Assignments</a></li>
                             <li><a class="wd-fg-red" href="#">Quizzes</a></li>
-                            <li><a class="wd-fg-red" href="../grades/index.html">Grades</a></li>
+                            <li><a class="wd-fg-red" href="../grades/grades.html">Grades</a></li>
                             <li><a class="wd-fg-red" href="#">People</a></li>
                             <li><a class="wd-fg-red" href="#">Panopto Video</a></li>
                             <li><a class="wd-fg-red" href="#">Discussions</a></li>
@@ -142,11 +143,10 @@
                             <li><a class="wd-fg-red" href="#">Outcomes</a></li>
                             <li><a class="wd-fg-red" href="#">Collaborations</a></li>
                             <li><a class="wd-fg-red" href="#">Syllabus</a></li>
-                            <li><a class="wd-fg-red" href="../settings/course-details.html">Settings</a></li>
+                            <li><a class="wd-fg-red" href="../settings/index.html">Settings</a></li>
                         </ul>
                     </div>
 
-                    <!-- Flex column -->
                     <div class="wd-flex-course-assignments col-10">
                         <div class="wd-course-assignments-header">
                             <div class="buttons float-end">
@@ -306,13 +306,11 @@ This assignment describes how to install the development environment for creatig
                                     </div>
                                 </div>
 
+
                                 <div class="form-group row wd-form-center mb-4">
                                     <div class="col-3">Assign</div>
                                     <div class="col-6">
-                                        <div
-                                            class="wd-custom-round-border"
-                                            style="text-align: left"
-                                        >
+                                        <div class="wd-custom-round-border" style="text-align: left">
                                             Assign to
                                             <br />
                                             <select class="form-control form-select">
@@ -321,30 +319,27 @@ This assignment describes how to install the development environment for creatig
                                             <br />
                                             Due
                                             <br />
-                                            <input
-                                                class="form-control"
-                                                type="text"
-                                                value="07/25/2023"
-                                            />
+                                            <input class="form-control" id="due-date" type="text" value="09/18/2023">
                                             <br />
                                             Available from
                                             <br />
-                                            <input
-                                                class="form-control"
-                                                type="text"
-                                                value="07/05/2023"
-                                            />
+                                            <input class="form-control" id="start-date" type="text" value="09/08/2023">
                                             <br />
                                             Until
                                             <br />
-                                            <input
-                                                class="form-control"
-                                                type="text"
-                                                value="07/29/2023"
-                                            />
+                                            <input class="form-control" id="end-date" type="text" placeholder="Due date">
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <script>
+                                    $(document).ready(function() {
+                                        $('#due-date').datepicker();
+                                        $('#start-date').datepicker();
+                                        $('#end-date').datepicker();
+                                    });
+                                </script>
+                                
 
                                 <div class="wd-footer  mb-2">
                                     <hr />

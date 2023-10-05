@@ -2,7 +2,7 @@
     width: 77px;
     background-color: black;
     height: 100%;
-    position: fixed;
+    position: relative;
 }
 
 .wd-flex-navbar ul {
@@ -46,11 +46,11 @@ body {
 }
 
 .wd-bg-red {
-    color: red;
+    color: #D41B2C;
 }
 
 .wd-fg-red {
-    color: red;
+    color: #D41B2C;
 }
 
 .wd-fg-white {
@@ -68,7 +68,7 @@ body {
 }
 
 .wd-flex-navbar .wd-home-nav-active a {
-    color: red;
+    color: #D41B2C;
 }
 
 .wd-flex-course-screen {
@@ -95,7 +95,7 @@ body {
 
 .wd-flex-courses-navbar {
     margin-left: 10px;
-    position: fixed;
+    position: relative;
 }
 
 .wd-flex-courses-navbar ul {
@@ -104,6 +104,7 @@ body {
 
 .wd-flex-courses-navbar li {
     list-style: none;
+    margin-bottom: 10px;
 }
 
 .wd-flex-courses-navbar a {
@@ -162,11 +163,19 @@ li.list-group-item.wd-list-assignment-element a {
 }
 
 .nav-link {
-    color:red;
+    color:#D41B2C;
 }
 
 .table td {
     padding-left: 10px;
+}
+
+.wd-course-breadcrumb .breadcrumb-item:first-child {
+    color: #D41B2C;
+}
+
+.wd-course-breadcrumb .breadcrumb-item {
+    margin-right: 10px; 
 }
 
 

@@ -18,8 +18,6 @@
 }
 
 .wd-account-profile {
-    /* display: flex;
-    flex-direction: column; */
     position: relative;
     left: 230px;
 }
@@ -69,7 +67,7 @@ body {
 }
 
 .wd-bg-red {
-    color: red;
+    color: #D41B2C;
 }
 
 .wd-fg-black {
@@ -77,16 +75,12 @@ body {
 }
 
 .wd-fg-red {
-    color: red;
+    color: #D41B2C;
 }
 
 .wd-fg-white {
     color: white;
 }
-
-/* .wd-home-nav-icon {
-    margin-bottom: 5px;
-} */
 
 .wd-home-nav-text {
     margin-bottom: 10px;
@@ -121,6 +115,10 @@ body {
     font-size: larger;
 }
 
+.wd-text-profile-body {
+    font-size: 0.85em;
+}
+
 .wd-account-profile-edit-button {
     position: relative;
     left: 50px;
@@ -144,4 +142,12 @@ body {
 
 .wd-no-decoration {
     text-decoration: none;
+}
+
+.wd-course-breadcrumb .breadcrumb-item:first-child {
+    color: #D41B2C;
+}
+
+.wd-course-breadcrumb .breadcrumb-item {
+    margin-right: 10px; 
 }
