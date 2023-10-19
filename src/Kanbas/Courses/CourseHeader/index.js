@@ -17,7 +17,6 @@ function CourseHeader() {
       <button class="btn wd-bg-lightgray">
         <HiOutlineEllipsisVertical />
       </button>
-      <hr />
     </div>
   );
 }

@@ -8,6 +8,7 @@ function Home() {
       <div className="d-flex col-10">
         <div className="w-75">
         <CourseHeader />
+        <hr />
           <ModuleList />
         </div>
         <div className="wd-course-status">
