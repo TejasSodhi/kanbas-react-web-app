@@ -37,10 +37,12 @@ function Assignments() {
             <AiOutlinePlus />
             Group
           </button>
+          <Link to = {`/Kanbas/Courses/${courseId}/Assignments/addAssignment`}>
           <button class="btn btn-danger">
             <AiOutlinePlus />
             Assignment
           </button>
+          </Link>
           <button class="btn wd-bg-lightgray">
             <HiOutlineEllipsisVertical />
           </button>
