@@ -11,7 +11,7 @@ function TodoForm() {
       <button onClick={() => dispatch(updateTodo(todo))}> Update </button>
       <input
         value={todo.title}
-        onChange={(e) => dispatch(setTodo({ ...todo, title: e.target.value }))}
+        onChange={(e) => dispatch(setTodo({todo:{ ...todo, title: e.target.value }}))}
       />
     </li>
   );

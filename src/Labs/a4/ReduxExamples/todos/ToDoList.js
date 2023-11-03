@@ -11,6 +11,7 @@ function TodoList() {
       <ul className="list-group">
        <TodoForm />
         {todos.map((todo) => (
+          // <TodoItem key={todo.id} todo={todo} />
           <TodoItem todo={todo} />
         ))}
       </ul>
