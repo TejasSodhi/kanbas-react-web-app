@@ -68,7 +68,7 @@ function Dashboard(
                 <div className="card h-50">
                   <img src={courseIcon} />
                   <div className="card-body">
-                    <h6 className="card-title wd-card-title">{course.nu}</h6>
+                    <h6 className="card-title wd-card-title">{course.number}</h6>
                     <div className="card-text">
                       <p className="card-text">{course.name}</p>
                       <button
