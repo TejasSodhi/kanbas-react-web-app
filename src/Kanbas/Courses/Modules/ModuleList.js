@@ -6,19 +6,46 @@ import { AiOutlinePlus, AiFillCheckCircle } from "react-icons/ai";
 import { HiOutlineEllipsisVertical } from "react-icons/hi2";
 import { LuGripVertical } from 'react-icons/lu'
 import { useSelector, useDispatch } from "react-redux";
+import * as service from "./service";
+import { useEffect } from "react";
 import {
   addModule,
   updateModule,
   deleteModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
 
 function ModuleList() {
   const { courseId } = useParams();
-  //const modules = db.modules;
+
+  useEffect(() => {
+    service.findModulesForCourses(courseId).then((modules) =>
+      dispatch(setModules(modules))
+    );
+  }, [courseId]);
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  const handleAddModule = () => {
+    service.createModuleForCourse(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    service.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async (module) => {
+    const status = await service.updateModule(module);
+    dispatch(updateModule(module));
+    dispatch(setModule({ name: "Module Name", description: "Module Description" }));
+  }
 
   return (
     <ul className="wd-modules-list">
@@ -48,7 +75,7 @@ function ModuleList() {
             )
           }
         />
-        <br />
+        {/* <br />
         <button
           className="btn btn-success"
           onClick={() =>
@@ -63,7 +90,19 @@ function ModuleList() {
         >
           Update Module
         </button>
+      </li> */}
+      <br />
+        <button className="btn btn-success" onClick={handleAddModule}>
+          Add Module
+        </button>
+        <button
+          className="btn btn-primary ms-2"
+          onClick={() => handleUpdateModule(module)}
+        >
+          Update Module
+        </button>
       </li>
+
 
       {modules
         .filter((module) => module.course === courseId)
@@ -78,7 +117,7 @@ function ModuleList() {
               </button>
               <button
                 className="btn btn-danger ms-1"
-                onClick={() => dispatch(deleteModule(module._id))}
+                onClick={() => handleDeleteModule(module._id)}
               >
                 Delete
               </button>

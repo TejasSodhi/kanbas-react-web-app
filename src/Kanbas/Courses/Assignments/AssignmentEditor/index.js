@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { updateAssignment, selectAssignment } from "../assignmentReducer";
+import * as service from '../service';
 
 function AssignmentEditor() {
   // const { assignmentId } = useParams();
@@ -19,9 +20,14 @@ function AssignmentEditor() {
   const a = assignments.find((a) => a._id === assignmentId);
   const [assignment, setAssignment] = useState(a);
 
-  const handleSave = () => {
-    // console.log("Actually saving assignment TBD in later assignments");
-    // navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  // const handleSave = () => {
+  //   // console.log("Actually saving assignment TBD in later assignments");
+  //   // navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  //   dispatch(updateAssignment(assignment));
+  //   navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  // };
+  const handleSave = async(assignmentId) => {
+    const status = await service.updateAssignment(assignmentId, assignment);
     dispatch(updateAssignment(assignment));
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
@@ -113,7 +119,7 @@ function AssignmentEditor() {
         >
           Cancel
         </Link>
-        <button onClick={handleSave} className="btn btn-danger me-2">
+        <button onClick={() => handleSave(assignmentId)} className="btn btn-danger me-2">
           Save
         </button>
       </div>
