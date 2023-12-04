@@ -2,45 +2,29 @@ import * as client from "./client";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function Signin() {
-  const [credentials, setCredentials] = useState({
-    username: "",
-    password: "",
-  });
-  const navigate = useNavigate();
-  const signin = async () => {
-    const response = await client.signin(credentials);
-
-    // Checking if user could be fetched, then navigating to their profile page
-    if(response){
-        navigate("/Kanbas/account");
-    }
-
-  };
-  return (
-    <div>
-      <h1>Signin</h1>
-      <input
-        value={credentials.username}
-        className="form-control"
-        placeholder="Username"
-        onChange={(e) =>
-          setCredentials({ ...credentials, username: e.target.value })
-        }
-      />
-      <input
-        type="password"
-        value={credentials.password}
-        className="form-control"
-        placeholder="Password"
-        onChange={(e) =>
-          setCredentials({ ...credentials, password: e.target.value })
-        }
-      />
-      <button className="btn btn-primary mt-2" onClick={signin}>
-        {" "}
-        Sign In{" "}
-      </button>
-    </div>
-  );
+    const [credentials, setCredentials] = useState({ username: "", password: "" });
+    const navigate = useNavigate();
+    const signin = async () => {
+        console.log("signing in...")
+        await client.signin(credentials);
+        navigate("/project/account");
+        console.log("navigated to /project/account")
+    };
+    return (
+        <div>
+            <h1>Sign In</h1>
+            <div className="row">
+                <div className="col-2">
+                    <input placeholder="Username" value={credentials.username} onChange={(e) => setCredentials({...credentials, username: e.target.value})}/>
+                </div>
+            </div>
+            <div className="row" style={{paddingTop: '10px', paddingBottom: '10px'}}>
+                <div className="col-2">
+                    <input placeholder="Password" type="password" value={credentials.password} onChange={(e) => setCredentials({...credentials, password: e.target.value})}/>
+                </div>
+            </div>
+            <button className="btn btn-primary" onClick={signin}> Sign In </button>
+        </div>
+    );
 }
 export default Signin;

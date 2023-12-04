@@ -1,50 +1,49 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as client from "./client";
+
 function Signup() {
   const [error, setError] = useState("");
   const [credentials, setCredentials] = useState({
-    username: "",
-    password: "",
-  });
+    username: "", password: "" });
   const navigate = useNavigate();
-
   const signup = async () => {
     try {
       await client.signup(credentials);
-      navigate("/Kanbas/account");
+      navigate("/project/account");
     } catch (err) {
       setError(err.response.data.message);
     }
   };
   return (
     <div>
-      <h3>Signup</h3>
+      <h1>Sign Up</h1>
       {error && <div>{error}</div>}
-      <input
-        className="form-control mt-3"
-        placeholder="Username.."
-        value={credentials.username}
-        onChange={(e) =>
-          setCredentials({
-            ...credentials,
-            username: e.target.value,
-          })
-        }
-      />
-      <input
-        className="form-control"
-        placeholder="Password..."
-        value={credentials.password}
-        onChange={(e) =>
-          setCredentials({
-            ...credentials,
-            password: e.target.value,
-          })
-        }
-      />
-      <button className="btn btn-primary mt-2" onClick={signup}>
-        Signup
+      <div className="row">
+            <div className="col-2">
+                <input
+                    placeholder="Username"
+                    value={credentials.username}
+                    onChange={(e) => setCredentials({
+                    ...credentials,
+                    username: e.target.value })}
+                />
+            </div>
+      </div>
+      <div className="row" style={{paddingTop: '10px', paddingBottom: '10px'}}>
+                <div className="col-2">
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={credentials.password}
+                        onChange={(e) => setCredentials({
+                        ...credentials,
+                        password: e.target.value })} 
+                    />
+                </div>
+            </div>
+      <button className="btn btn-primary" onClick={signup}>
+        Sign Up
       </button>
     </div>
   );
