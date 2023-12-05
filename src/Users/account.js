@@ -23,9 +23,6 @@ function Account() {
     navigate("/project/signin");
   };
 
-
-
-
   useEffect(() => {
     if (id) {
       findUserById(id);
